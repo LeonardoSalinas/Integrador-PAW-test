@@ -1,0 +1,855 @@
+/*------------------------------ General ------------------------------*/
+
+
+:root {
+	--colorClaro: #2965c6;
+	--colorOscuro: #013c9b;
+}
+
+/*.lineSeparator {
+	height: 1px;
+	background: var(--colorClaro);
+	border-bottom: 1px solid var(--colorClaro);
+	clear: both;
+}*/
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+textarea {
+	font: 400 13.3333px Arial; 
+}
+
+body {
+	background: #ddeaff;
+}
+
+.goToTop {
+    display: none;
+    position: fixed;
+    bottom: 1em;
+    right: 2em;
+    z-index: 99;
+    border-width: 3px;
+    border-color: #f2f2f2;
+    border-style: outset;
+    box-shadow: 2px 2px 7px rgba(0,0,0,.6);
+    border-radius: 50%;
+    outline: none;
+    background-color: var(--colorClaro);
+    color: white;
+    cursor: pointer;
+    padding: .6em .9em;
+    font-size: 1.2em;
+}
+
+.goToTop:hover {
+	background-color: var(--colorOscuro);  	
+	transform-origin: 50% 50%;
+  	animation: jumpAnimation .5s;
+}
+
+
+/*------------------------------ Animaciones ------------------------------*/
+
+
+@keyframes fadeAnimation {
+	from {opacity: 0.1}
+	to {opacity: 1}
+}
+
+@keyframes jumpAnimation {
+  	0%   {transform: translateY(0%);}
+  	25%  {transform: translateY(-10%);}
+	50%  {transform: translateY(5%);}
+	75%  {transform: translateY(-10%);}
+  	100% {transform: translateY(0%);}
+}
+
+@keyframes scaleAnimation {
+	from {transform: scale(.1);}
+	to {transform: scale(1);}
+}
+
+@keyframes blurAnimation {
+	from {filter: blur(4px);}
+	to {filter: blur(0px);}
+}
+
+
+/*------------------------------ Header ------------------------------*/
+
+
+header {
+	
+}
+
+nav {
+
+}
+
+.logo {
+	position: relative;
+	float: left;	
+}
+
+.datosPerHeader{
+	text-align: center;
+	float: right;
+	margin: 5px;
+}
+
+.navBar {
+	clear: both;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: var(--colorClaro);
+}
+
+.navBar li, .navBar>ul {
+    float: left;
+}
+
+.navBar>ul {
+	list-style: none;
+}
+
+.navBar>ul>li>button {
+
+}
+
+.navBar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navBar li a:hover {
+    background-color: var(--colorOscuro);
+}
+
+.contact {
+	position: absolute;	
+	right: 0;
+}
+
+
+/*------------------------------ Footer ------------------------------*/
+
+
+footer{
+	background-color: #232128;
+	border-top: 1em solid var(--colorClaro);
+	color: #dbdbdb;
+	padding: 2em;
+}
+
+footer p {
+	padding: 2em 0;
+}
+
+footer ul {
+	list-style: none;
+	padding: 1em 0;
+	border-top: 2px solid #dbdbdb;
+	border-bottom: 2px solid #dbdbdb;
+}
+
+footer ul li {
+	display: inline-block;
+	margin: 5px;
+}
+
+footer ul li a {
+	text-decoration: none;
+}
+
+footer ul li a:link {
+	color: #dbdbdb;
+}
+
+footer ul li a:visited {
+	color: #dbdbdb;
+}
+
+footer ul li a:hover {
+	text-decoration: underline;
+}
+
+
+/*------------------------------ index: Menú alquileres/ventas ------------------------------*/
+
+
+.mainMenu {
+	width: 100%;
+	height: auto;
+	display: inline-block;
+}
+
+.mainMenu figure {
+	display: inline-block;
+	position: relative;
+	width: 30%;
+}
+
+.alquileres {
+	float: left;
+	margin: .5em 0em .5em 0em;
+	margin-left: 10%;
+}
+
+.compras {
+	float: right;
+	margin: .5em 0em .5em 0;
+	margin-right: 10%;
+}
+
+.mainMenu figure img{
+	width: 100%;
+	height: auto;
+	border-radius: 10px;
+	opacity: 0.7;
+}
+
+.alqImg {
+	
+}
+
+.compImg{
+
+}
+
+.alqButton {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.compButton {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.mainMenu button {
+    background-color: var(--colorClaro);
+    border: none;
+    color: white;
+    padding: .8em 1.3em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1em;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 0.5em;
+    position: absolute;
+    transition: .5s;
+}
+
+.mainMenu button:hover {
+	background-color: var(--colorOscuro);
+	padding: 1.5em 2em;
+}
+
+.descSitio {
+	width: 95%;	
+	height: auto;
+	text-align: center;
+	padding: 2em;
+	border-top: 3px solid #000;
+	border-bottom: 3px solid #000;
+}
+
+
+/*------------------------------ index: Sección oportunidades/slider------------------------------*/
+
+.oportunidades {
+	margin-bottom: 3em;
+}
+
+.h2-Oportunidades {
+	text-align: center;
+	padding: 1em;
+	color: var(--colorClaro);
+}
+
+.indexSliderContenedor {
+	position: relative;
+}
+
+.mySlideLeft, .mySlideRight {
+	position: absolute;
+	width: 10%;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.mySlideLeft {
+	left: 5em;
+}
+
+.mySlideRight {
+	right: 5em;
+}
+
+.mySlide {
+	width: 50%;
+	max-width: 600px;
+	max-height: 450px;
+	text-align: center;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	animation: blurAnimation .3s;
+	margin: 1em 0;
+}
+
+.indexSliderContenedor  figure  img {
+	width: 100%;
+	border-radius: .5em;
+	border: 3px solid var(--colorClaro);
+}
+
+.indexSliderContenedor figure figcaption {
+	width: 60%;
+	height: auto;
+	max-height: 10%	;
+	overflow: hidden;
+	color: #fff;
+	background-color: var(--colorClaro);
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: .5em;
+}
+
+/*.anim {
+	animation-name: anim;
+	animation-duration: .5s;
+}*/
+
+/*@keyframes anim {
+	from {
+		transform: translateY(40%);
+		width: 10%;
+		position: relative;
+		left: 82%;
+		animation-timing-function: ease-in-out;
+	}
+	to {
+
+	}
+}*/
+
+.botonSliderIzq{
+	position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translate(0%,-50%);
+}
+
+.botonSliderDer{
+	position: absolute;
+    top: 50%;
+    right: 0%;
+    transform: translate(0%,-50%);
+}
+
+.botonSliderIzq, .botonSliderDer {
+	border: none;
+	color: #fff;
+	background-color: var(--colorClaro);
+	font-size: 2em;
+	padding: .5em;
+	transition: .2s;
+}
+
+.botonSliderIzq:hover, .botonSliderDer:hover {
+	background-color: var(--colorOscuro);
+	padding: .8em;
+}
+
+
+/*------------------------------ alquileres/ventas: barra de búsqueda ------------------------------*/
+
+
+.h2-Alquilar, .h2-Vender {
+	display: inline-block;	
+	margin: .2em .5em;
+	color: var(--colorClaro);
+}
+
+.buscarAlquilar, .buscarVender {
+	position: relative;
+	float: right;
+	margin: .5em;
+}
+
+.buscarAlquilar-input, .buscarVender-input{
+	height: 1.8em;
+	border: 1px solid var(--colorClaro);
+}
+
+.buscarAlquilar-button, .buscarVender-button{
+	border: none;
+	color: #fff;
+	background-color: var(--colorClaro);
+	font-size: 1em;
+	padding: .3em .5em;
+	border-radius: .4em;
+	cursor: pointer;
+}
+
+.buscarAlquilar-button:hover, .buscarVender-button:hover, .itemAlquiler > button:hover, .fotoItemAlquiler button:hover , .itemVenta > button:hover, .fotoItemVenta button:hover{
+	background-color: var(--colorOscuro);
+}
+
+
+/*------------------------------ alquileres/ventas: sección de los items ------------------------------*/
+
+
+.menuAlquileres, .menuVentas {
+	position: relative;
+	margin: .5em;
+	width: 80%;
+}
+
+.itemAlquiler, .itemVenta {
+	position: relative;
+	border: 1px solid #0015ff;
+	margin: 1em 0;
+}
+
+.itemAlquiler a button, .itemVenta a button {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 0;
+	border: none;
+	color: #fff;
+	background-color: var(--colorClaro);
+	font-size: 1em;
+	padding: .3em .5em;
+	margin-right: 1em;
+	border-radius: .4em;
+	cursor: pointer;
+
+}
+
+.fotoItemAlquiler, .fotoItemVenta {
+	position: relative;
+	display: inline-block;
+	width: 20%;
+	max-width: 200px;
+	max-height: 150px;
+	min-width: 200px;
+	min-height: 150px;
+}
+
+.fotoItemAlquiler img, .fotoItemVenta img {
+	width: 100%;
+}
+
+.fotoItemAlquiler p, .fotoItemVenta p {
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: .2em;
+	background-color: var(--colorClaro);
+	color: #fff;
+}
+
+.fotoItemAlquiler button, .fotoItemVenta button {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	margin: .4em;
+	border: 1px solid #0015ff;
+	color: #fff;
+	background-color: var(--colorClaro);
+	font-size: 1em;
+	padding: .2em .4em;
+	cursor: pointer;
+}
+
+.descItemAlquiler, .descItemVenta {
+	display: inline-block;
+	position: absolute;
+}
+
+.descItemAlquiler ul, .descItemVenta ul {
+	list-style: circle;
+	padding: .5em;
+	margin-left: 2em;
+	line-height: 1em;
+}
+
+
+/*------------------------------ detallesPropiedad: breadcrumb ------------------------------*/
+
+
+.breadcrumb {
+	height: 2em;
+	margin: .5em 0 0 .5em;
+}
+
+.breadcrumbSeparator {
+	display: inline-block;
+	color: var(--colorClaro);
+}
+
+.breadcrumb a{
+	background-color: var(--colorClaro);
+	color: #fff;
+	margin-top: 12em;
+	padding: 5px;
+	text-decoration: none;
+	font-size: 1em;	
+	border-radius: 1em;
+}
+
+.breadcrumb a:hover{
+	background-color: var(--colorOscuro);
+	text-decoration: underline;
+}
+
+
+/*------------------------------ detallesPropiedad: slider de fotos ------------------------------*/
+
+
+.detallesSlider {
+	/*position: relative;*/
+	margin-bottom: 2.5em;
+}
+
+.detallesSliderContenedor{
+	position: relative;
+
+}
+
+.detallesSliderContenedor > figure{
+	width: 40%;
+	max-width: 600px;
+	max-height: 450px;
+	min-width: 600px;
+	min-height: 450px;
+	text-align: center;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.detallesSliderContenedor > figure > img {
+	width: 100%;
+	border-radius: .5em;
+	border: 3px solid var(--colorClaro);
+}
+
+.detallesSliderContenedor > figure > figcaption {
+	color: #fff;
+	background-color: var(--colorClaro);
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: .5em;
+}
+
+.dotsDetalles {
+	margin-top: .5em;
+	position: absolute;
+	text-align: center;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.2s;
+}
+
+.dotActive {
+	background-color: var(--colorOscuro);
+}
+
+
+/*------------------------------ detallesPropiedad: Info de la propiedad ------------------------------*/
+
+
+.infoPropiedad {
+	margin: 1em;
+	border: 2px solid black;
+	width: 80%;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.descInfoPropiedad {
+	margin: 1em 0;
+	
+}
+
+.descInfoPropiedad > ul{
+	list-style: circle;
+	padding: .5em;
+	margin-left: 2em;
+	line-height: 1em;
+}
+
+.googleMapInfoPropiedad {
+	width: 40%;
+	height: 80%;
+	border: 2px solid var(--colorClaro);
+	background-color: #bbb;
+	position: absolute;
+	top: 50%;
+	right: 0;
+	transform: translateY(-50%);
+	margin-right: 3%;
+}
+
+
+/*------------------------------ contacto: formulario de contacto ------------------------------*/
+
+
+.formContactoContenedor {
+	position: relative;
+	margin: 2em 0;
+	padding-bottom: 10em;
+}
+
+.h2-contacto {
+	text-align: center;
+	padding: 1em;
+	color: var(--colorClaro);
+}
+
+.formContactoContenedor form {
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 40%;
+	height: auto;
+	border: solid 2px var(--colorClaro);
+	border-radius: 10px;
+	padding: 1em;
+	background-color: #babdff;
+	color: #0061ff;
+
+}
+
+.formContactoContenedor form input, textarea {
+	width: 100%;
+    padding: 3px 5px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 2px solid var(--colorClaro);
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.formContactoContenedor form textarea {
+	max-width: 100%;
+	min-width: 100%;
+}
+
+.formContactoContenedor form input[type="submit"] {
+    width: 25%;
+    background-color: var(--colorClaro);
+    color: white;
+    padding: 14px 20px;
+    margin: 8px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.formContactoContenedor form input[type="submit"]:hover {
+	background-color: var(--colorOscuro);
+}
+
+.formContactoContenedor form input[type="reset"] {
+    width: 25%;
+    background-color: #9b9b9b;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.formContactoContenedor form input[type="reset"]:hover {
+	background-color: #898989;
+}
+
+
+/*------------------------------ contacto: formulario de contacto ------------------------------*/
+
+
+.h2-tituloInfoContacto {
+	padding: 1em;
+	color: var(--colorClaro);
+}
+
+.infoContacto {
+	/*position: relative;*/
+}
+
+.infoContacto ul {
+	list-style: circle;
+	padding: .5em;
+	margin-left: 2em;
+	line-height: 1em;
+}
+
+.infoContacto ul li {
+	margin-bottom: .5em;
+}
+
+.googleMapInfoContacto {
+	width: 50em;
+	height: 20em;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	border: 2px solid var(--colorClaro);
+	background-color: #bbb;
+	margin: 3em 0 10em 0;
+}
+
+
+/*------------------------------ buscarAvanzado: formulario ------------------------------*/
+
+
+.h2-buscarAvanzado {
+	padding: 1em;
+	color: var(--colorClaro);
+	text-align: center;
+}
+
+.buscarAvanzadoContenedor {
+	margin-bottom: 10em;
+}
+
+.buscarAvanzadoContenedor form {
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 35%;
+	height: auto;
+	border: solid 2px var(--colorClaro);
+	border-radius: 10px;
+	padding: 1em;
+	background-color: #babdff;
+	color: #0061ff;
+}
+
+.buscarAvanzadoContenedor form input {
+    padding: 3px 5px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 2px solid var(--colorClaro);
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.buscarAvanzadoContenedor form input[type="text"], .buscarAvanzadoContenedor form input[name="tipo"], .buscarAvanzadoContenedor form input[name="transaccion"], .buscarAvanzadoContenedor form input[name="ubicacion"], .buscarAvanzadoContenedor form input[name="estado"] {
+	width: 100%;
+}
+
+.buscarAvanzadoContenedor form input[type="number"] {
+	width: 100%;
+}
+
+.buscarAvanzadoContenedor form input[type="button"] {
+    width: 30%;
+    background-color: var(--colorClaro);
+    color: white;
+    padding: 14px 20px;
+    margin: 8px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.buscarAvanzadoContenedor form input[type="radio"] {
+	/*width: 5%;*/
+}
+
+.buscarAvanzadoContenedor form label[for="patio"] {
+	margin-right: .8em;
+}
+
+.buscarAvanzadoContenedor form input[type="button"]:hover {
+	background-color: var(--colorOscuro);
+}
+
+.buscarAvanzadoContenedor form input[type="submit"] {
+    width: 30%;
+    background-color: var(--colorClaro);
+    color: white;
+    padding: 14px 20px;
+    margin: 8px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.buscarAvanzadoContenedor form input[type="submit"]:hover {
+	background-color: var(--colorOscuro);
+}
+
+.buscarAvanzadoContenedor form input[type="reset"] {
+    width: 30%;
+    background-color: #9b9b9b;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.buscarAvanzadoContenedor form input[type="reset"]:hover {
+	background-color: #898989;
+}
+
+.buscarAvanzadoContenedor form p {
+	display: inline-block;
+	color: #dddddd;
+	background-color: #009b0c;
+	font-size: .8em;
+	padding: 0 .4em;
+}
+
+
+/*------------------------------ getCasas ------------------------------*/
+
+
+.casasList, .usersList {
+	margin: 5em 0;
+	
+}
+
+.casasList ul li, .usersList ul li {
+	border: 2px solid var(--colorClaro);
+	text-align: center;
+	margin: .5em 0;
+	background-color: #fff;
+}
