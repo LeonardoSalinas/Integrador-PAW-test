@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Inicio - Inmobiliaria Mercedes</title>
+	<title>Home - Inmobiliaria Mercedes</title>
 	<link rel="stylesheet" id="styleLink" href="styles/style1.css">
 </head>
 
